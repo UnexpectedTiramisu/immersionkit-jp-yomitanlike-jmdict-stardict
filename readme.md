@@ -14,7 +14,8 @@ The tag implementation used as a guideline is that of *yomitan-import*, which ca
 Please see the comparison of desktop Yomitan and the built Stardict below.
 
 ## Download the Stardict files
-
+You can download the built StarDict files (zipped) from this repository's releases.
+[Click here for the latest release.](https://github.com/UnexpectedTiramisu/immersionkit-jp-yomitanlike-jmdict-stardict/releases/latest)
 
 ![Desktop Yomitan output for 大丈夫](assets/readme_sample_yomitan_popup.png)
 ![This repos's Stardict for 大丈夫 in KOReader](assets/readme_styled_stardict_popup.png)
