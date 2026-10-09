@@ -1,4 +1,4 @@
-# More Yomitan-like JMDict & JMNEDict Stardict for KOReader
+# A More Yomitan-like JMDict & JMNEDict Stardict for KOReader
 
 This repository is part of [*ImmersionKit*](https://github.com/UnexpectedTiramisu/immersionkit), a collection of tools to aid language learning through KOReader and Anki.
 
@@ -11,15 +11,39 @@ A core part of this, apart from the css in `renderer.py`, is `yomitan_sense_rema
 which provides Yomitan's abbreviations (e.g. "n" for noun) for classifications in JMDict.
 The tag implementation used as a guideline is that of *yomitan-import*, which can be viewed [here](https://github.com/yomidevs/yomitan-import/blob/main/jmdict_tags.go).
 
-Another important note is that when compared to other Stardict versions JMDict for KOReader,
-this tools flips the word / reading order (i.e. word, then reading).
-
 Please see the comparison of desktop Yomitan and the built Stardict below.
 
 ## Download the Stardict files
 
+
 ![Desktop Yomitan output for 大丈夫](assets/readme_sample_yomitan_popup.png)
 ![This repos's Stardict for 大丈夫 in KOReader](assets/readme_styled_stardict_popup.png)
+
+## Important notes
+
+### JMDict
+This tools builds a dictionary whose entries are split by sense and reading, resulting in more articles for words that have multiple possible spellings and senses.
+So, a combination of 
+- written form
+- reading
+- meaning / sense
+
+is one article.
+This is important for the usage with its companion KOReader plugin (mentioned above), because
+- 口 （くち）
+- 口 （こう）
+
+have different meanings and also occur at different frequencies.
+In order to reflect that, they were split into multiple entries.
+
+Another important note is that when compared to other Stardict versions JMDict for KOReader,
+this tools flips the word / reading order (i.e. word, then reading).
+
+### JMNEDict
+All possible name readings for a given headword are compiled into one article, and separated by pipes (|).
+See the example here:
+
+![This repos's Stardict for 石, JMNEDict, in KOReader](assets/readme_sample_jmnedict.png)
 
 Please note that the frequency information is **NOT** baked into the Stardict.
 
